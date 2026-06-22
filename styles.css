@@ -604,3 +604,63 @@ footer{
     font-size:2rem;
 }
 }
+
+/* ABOUT SECTION */
+
+.about-card p {
+
+    margin-bottom: 20px;
+
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+.quick-facts {
+
+    margin-top: 35px;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 15px;
+}
+
+.fact {
+
+    background: rgba(34,197,94,.08);
+
+    border: 1px solid rgba(34,197,94,.2);
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: .3s;
+}
+
+.fact:hover {
+
+    transform: translateY(-4px);
+
+    border-color: var(--primary);
+}
+
+.fact span {
+
+    font-size: 1.4rem;
+}
+
+.fact p {
+
+    margin: 0;
+    font-size: .95rem;
+}
