@@ -1,66 +1,76 @@
-// =========================================
-// MOBILE MENU
-// =========================================
+/* ==========================================
+   MOBILE MENU
+========================================== */
 
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click", () => {
+if (menuBtn) {
 
-    navLinks.classList.toggle("active");
+    menuBtn.addEventListener("click", () => {
 
-    if (navLinks.classList.contains("active")) {
+        navLinks.classList.toggle("active");
 
-        menuBtn.innerHTML = "✕";
+        if (navLinks.classList.contains("active")) {
 
-    } else {
+            menuBtn.innerHTML = "✕";
 
-        menuBtn.innerHTML = "☰";
-    }
+        } else {
 
-});
+            menuBtn.innerHTML = "☰";
 
-// =========================================
-// CLOSE MOBILE MENU AFTER CLICK
-// =========================================
+        }
 
-document.querySelectorAll(".nav-links a")
+    });
+
+}
+
+/* ==========================================
+   CLOSE MENU AFTER CLICK
+========================================== */
+
+document
+.querySelectorAll(".nav-links a")
 .forEach(link => {
 
     link.addEventListener("click", () => {
 
         navLinks.classList.remove("active");
 
-        menuBtn.innerHTML = "☰";
+        if(menuBtn){
+
+            menuBtn.innerHTML = "☰";
+
+        }
 
     });
 
 });
 
-// =========================================
-// TYPING EFFECT
-// =========================================
+/* ==========================================
+   TERMINAL TYPING EFFECT
+========================================== */
 
 const terminalText =
 document.querySelector(".terminal-text");
 
-const text =
-"$ Cloud • Linux • AWS • Python • DevOps";
+const typingText =
+"Cloud • Linux • AWS • Python • DevOps";
 
-let index = 0;
+let typingIndex = 0;
 
-function typeText() {
+function typeEffect() {
 
     if (!terminalText) return;
 
-    if (index < text.length) {
+    if (typingIndex < typingText.length) {
 
         terminalText.innerHTML +=
-        text.charAt(index);
+        typingText.charAt(typingIndex);
 
-        index++;
+        typingIndex++;
 
-        setTimeout(typeText, 70);
+        setTimeout(typeEffect, 70);
 
     }
 
@@ -68,27 +78,33 @@ function typeText() {
 
 window.addEventListener("load", () => {
 
-    terminalText.innerHTML = "";
+    if (terminalText) {
 
-    typeText();
+        terminalText.innerHTML = "$ ";
+
+        typeEffect();
+
+    }
 
 });
 
-// =========================================
-// CARD REVEAL ANIMATION
-// =========================================
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
 
-const cards =
-document.querySelectorAll(".card");
+const revealCards =
+document.querySelectorAll(
+".card, .experience-card, .timeline-item, .stat-card"
+);
 
-const observer =
+const revealObserver =
 new IntersectionObserver(
 
 (entries) => {
 
     entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
 
             entry.target.classList.add("show");
 
@@ -99,20 +115,20 @@ new IntersectionObserver(
 },
 
 {
-    threshold: 0.15
+    threshold:0.15
 }
 
 );
 
-cards.forEach(card => {
+revealCards.forEach(card => {
 
-    observer.observe(card);
+    revealObserver.observe(card);
 
 });
 
-// =========================================
-// ACTIVE NAV LINK
-// =========================================
+/* ==========================================
+   ACTIVE NAVIGATION
+========================================== */
 
 const sections =
 document.querySelectorAll("section");
@@ -134,7 +150,7 @@ window.addEventListener("scroll", () => {
 
         if (
 
-            pageYOffset >=
+            window.pageYOffset >=
             sectionTop - 200
 
         ) {
@@ -148,7 +164,9 @@ window.addEventListener("scroll", () => {
 
     navItems.forEach(link => {
 
-        link.classList.remove("active-link");
+        link.classList.remove(
+        "active-link"
+        );
 
         if (
 
@@ -158,7 +176,9 @@ window.addEventListener("scroll", () => {
 
         ) {
 
-            link.classList.add("active-link");
+            link.classList.add(
+            "active-link"
+            );
 
         }
 
@@ -166,14 +186,16 @@ window.addEventListener("scroll", () => {
 
 });
 
-// =========================================
-// NAVBAR SCROLL EFFECT
-// =========================================
+/* ==========================================
+   NAVBAR SCROLL EFFECT
+========================================== */
 
 const navbar =
 document.querySelector(".navbar");
 
 window.addEventListener("scroll", () => {
+
+    if (!navbar) return;
 
     if (window.scrollY > 50) {
 
@@ -181,7 +203,7 @@ window.addEventListener("scroll", () => {
         "rgba(13,17,23,.95)";
 
         navbar.style.boxShadow =
-        "0 4px 20px rgba(0,0,0,.2)";
+        "0 5px 20px rgba(0,0,0,.25)";
 
     }
 
@@ -197,29 +219,17 @@ window.addEventListener("scroll", () => {
 
 });
 
-// =========================================
-// FOOTER YEAR AUTO UPDATE
-// =========================================
-
-const footer =
-document.querySelector("footer p");
-
-if (footer) {
-
-    footer.innerHTML =
-    `© ${new Date().getFullYear()} Madan P M | Cloud & DevOps Engineer`;
-
-}
-
-// =========================================
-// SMOOTH PROJECT HOVER GLOW
-// =========================================
+/* ==========================================
+   PROJECT CARD GLOW
+========================================== */
 
 document
 .querySelectorAll(".project-card")
 .forEach(card => {
 
-    card.addEventListener("mousemove", e => {
+    card.addEventListener(
+    "mousemove",
+    (e) => {
 
         const rect =
         card.getBoundingClientRect();
@@ -233,35 +243,207 @@ document
         card.style.background =
         `radial-gradient(
             circle at ${x}px ${y}px,
-            rgba(34,197,94,.15),
+            rgba(34,197,94,.12),
             rgba(22,27,34,.9)
         )`;
 
     });
 
-    card.addEventListener("mouseleave", () => {
+    card.addEventListener(
+    "mouseleave",
+    () => {
 
         card.style.background =
-        "rgba(22,27,34,.75)";
+        "rgba(22,27,34,.8)";
 
     });
 
 });
 
-// =========================================
-// SCROLL TO TOP ON LOGO CLICK
-// =========================================
+/* ==========================================
+   STATS COUNTER ANIMATION
+========================================== */
+
+const statNumbers =
+document.querySelectorAll(".stat-card h3");
+
+const statsObserver =
+new IntersectionObserver(
+
+(entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+const stat =
+entry.target;
+
+const value =
+stat.innerText;
+
+if(value === "5+"){
+
+animateCounter(stat, 5);
+
+}
+
+if(value === "3+"){
+
+animateCounter(stat, 3);
+
+}
+
+}
+
+});
+
+},
+{
+threshold:0.6
+}
+
+);
+
+statNumbers.forEach(stat => {
+
+statsObserver.observe(stat);
+
+});
+
+function animateCounter(
+element,
+target
+){
+
+let count = 0;
+
+const interval =
+setInterval(() => {
+
+count++;
+
+element.innerText =
+count + "+";
+
+if(count >= target){
+
+clearInterval(interval);
+
+}
+
+},150);
+
+}
+
+/* ==========================================
+   SMOOTH LOGO SCROLL
+========================================== */
 
 const logo =
 document.querySelector(".logo");
 
+if(logo){
+
 logo.addEventListener("click", () => {
 
-    window.scrollTo({
+window.scrollTo({
 
-        top: 0,
-        behavior: "smooth"
+top:0,
 
-    });
+behavior:"smooth"
+
+});
+
+});
+
+}
+
+/* ==========================================
+   FOOTER YEAR
+========================================== */
+
+const footer =
+document.querySelector("footer p");
+
+if(footer){
+
+footer.innerHTML =
+
+`© ${new Date().getFullYear()}
+Madan P M | Cloud & DevOps Engineer`;
+
+}
+
+/* ==========================================
+   SCROLL PROGRESS BAR
+========================================== */
+
+const progressBar =
+document.createElement("div");
+
+progressBar.id =
+"scroll-progress";
+
+document.body.appendChild(
+progressBar
+);
+
+window.addEventListener(
+"scroll",
+() => {
+
+const scrollTop =
+document.documentElement.scrollTop;
+
+const scrollHeight =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+const scrollPercent =
+(scrollTop / scrollHeight) * 100;
+
+progressBar.style.width =
+scrollPercent + "%";
+
+}
+);
+
+/* ==========================================
+   BACK TO TOP BUTTON
+========================================== */
+
+const topBtn =
+document.createElement("button");
+
+topBtn.innerHTML = "↑";
+
+topBtn.id = "topBtn";
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 500){
+
+topBtn.style.display = "block";
+
+}else{
+
+topBtn.style.display = "none";
+
+}
+
+});
+
+topBtn.addEventListener("click", () => {
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
 
 });
