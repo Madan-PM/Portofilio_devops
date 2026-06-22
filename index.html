@@ -1,86 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Madan P M | Aspiring Cloud & DevOps Engineer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Madan P M | Cloud & DevOps Engineer</title>
+
+    <meta name="description"
+        content="Madan P M - Cloud & DevOps Engineer Portfolio">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-<header class="navbar">
-<div class="logo">Madan PM</div>
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
 
-<section class="hero">
-<div class="hero-content">
-<p class="terminal-text">$ </p>
-<h1>Madan P M</h1>
-<h2>Aspiring Cloud & DevOps Engineer</h2>
-<p class="hero-description">
-Operations Leader with 5+ years of experience transitioning into Cloud Computing and DevOps.
-Currently pursuing a BCA while building expertise in AWS, Linux, Python, Git and Automation.
-</p>
-<div class="hero-buttons">
-<a href="#projects" class="btn-primary">View Projects</a>
-<a href="assets/resume.pdf" class="btn-secondary">Download Resume</a>
-</div>
-</div>
-</section>
+    <!-- NAVBAR -->
 
-<section id="about" class="section">
-<h2>About Me</h2>
-<div class="card">
-<p>My journey started in the BPO industry where I progressed into leadership roles managing teams, escalations, SLAs and operational excellence.</p>
-<p>In 2024 I resumed my education through a BCA at Amity University and started my transition into Cloud & DevOps.</p>
-<p>My goal is to combine operational expertise with technical skills to build reliable cloud systems.</p>
-</div>
-</section>
+    <header class="navbar">
 
-<section id="skills" class="section">
-<h2>Skills</h2>
-<div class="grid">
-<div class="card"><h3>Cloud</h3><ul><li>AWS Fundamentals</li><li>EC2</li><li>S3</li><li>IAM</li></ul></div>
-<div class="card"><h3>Linux</h3><ul><li>User Management</li><li>Permissions</li><li>Monitoring</li></ul></div>
-<div class="card"><h3>Programming</h3><ul><li>Python</li><li>Google Apps Script</li></ul></div>
-<div class="card"><h3>Tools</h3><ul><li>Git</li><li>GitHub</li><li>VS Code</li></ul></div>
-</div>
-</section>
+        <div class="logo">
+            Madan P M
+        </div>
 
-<section id="projects" class="section">
-<h2>Projects</h2>
-<div class="grid">
-<div class="card"><h3>AWS Learning Lab</h3><p>Hands-on learning with EC2, S3, IAM and VPC.</p></div>
-<div class="card"><h3>Linux Administration Lab</h3><p>Practiced Linux commands, permissions and process management.</p></div>
-<div class="card"><h3>Python Automation</h3><p>Built small automation scripts and utilities.</p></div>
-</div>
-</section>
+        <nav>
 
-<section id="experience" class="section">
-<h2>Experience</h2>
-<div class="card"><h3>Operations Associate | Ditto Insurance</h3><p>Managed claims operations, issue resolution and stakeholder coordination.</p></div>
-<div class="card"><h3>Team Leader Operations</h3><p>Led teams, handled escalations, improved service delivery and performance.</p></div>
-</section>
+            <ul class="nav-links">
 
-<section id="contact" class="section">
-<h2>Contact</h2>
-<div class="card">
-<p>Email: madanpm05@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/madanpm</p>
-<p>GitHub: github.com/Madan-PM</p>
-</div>
-</section>
+                <li><a href="#about">About</a></li>
 
-<footer><p>© 2026 Madan P M</p></footer>
-<script src="script.js"></script>
+                <li><a href="#journey">Journey</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#roadmap">Roadmap</a></li>
+
+                <li><a href="#experience">Experience</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+        <div class="menu-btn">
+
+            ☰
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="terminal-bg"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-avatar">
+
+                <img src="assets/avatar.png" alt="Madan Avatar">
+
+            </div>
+
+            <p class="terminal-text"></p>
+
+            <h1>Madan P M</h1>
+
+            <h2>Cloud & DevOps Engineer</h2>
+
+            <p class="hero-description">
+
+                Operations Leader with 5+ years of experience
+                transitioning into Cloud Computing and DevOps.
+
+                Currently pursuing a Bachelor of Computer Applications
+                while building expertise in AWS, Linux, Python,
+                Git, Docker, Kubernetes and Infrastructure Automation.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                    class="btn-primary">
+
+                    View Projects
+
+                </a>
+
+                <a href="assets/resume.pdf"
+                    class="btn-secondary"
+                    target="_blank">
+
+                    Download Resume
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about"
+        class="section">
+
+        <h2>About Me</h2>
+
+        <div class="card">
+
+            <p>
+
+                I started my professional journey in the BPO industry,
+                where I developed strong skills in operations,
+                customer experience, stakeholder management,
+                incident resolution and team leadership.
+
+            </p>
+
+            <p>
+
+                While progressing into leadership roles,
+                I resumed my academic journey by pursuing
+                a Bachelor of Computer Applications (BCA)
+                through Amity University.
+
+            </p>
+
+            <p>
+
+                Today I am actively transitioning into
+                Cloud Computing and DevOps by learning
+                AWS, Linux, Python, Git and Infrastructure
+                Automation.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- JOURNEY -->
+
+    <section id="journey"
+        class="section">
+
+        <h2>My Journey</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>2020</h3>
+
+                <p>
+
+                    Started Career in BPO
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>2021</h3>
+
+                <p>
+
+                    Assistant Team Leader
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>2022 - 2024</h3>
+
+                <p>
+
+                    Team Leader Operations
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>2024</h3>
+
+                <p>
+
+                    Started BCA
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>2026+</h3>
+
+                <p>
+
+                    Cloud & DevOps Journey
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills"
+        class="section">
+
+        <h2>Technical Skills</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Cloud</h3>
+
+                <ul>
+
+                    <li>AWS Fundamentals</li>
+                    <li>EC2</li>
+                    <li>S3</li>
+                    <li>IAM</li>
+                    <li>VPC</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Linux</h3>
+
+                <ul>
+
+                    <li>User Management</li>
+                    <li>Permissions</li>
+                    <li>Monitoring</li>
+                    <li>Package Management</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Programming</h3>
+
+                <ul>
+
+                    <li>Python</li>
+                    <li>Google Apps Script</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>DevOps</h3>
+
+                <ul>
+
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Docker (Learning)</li>
+                    <li>CI/CD Concepts</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects"
+        class="section">
+
+        <h2>Projects</h2>
+
+        <div class="grid">
+
+            <div class="card project-card">
+
+                <h3>AWS Learning Lab</h3>
+
+                <p>
+
+                    Hands-on practice with EC2,
+                    S3, IAM and VPC.
+
+                </p>
+
+            </div>
+
+            <div class="card project-card">
+
+                <h3>Linux Administration Lab</h3>
+
+                <p>
+
+                    Linux commands,
+                    users, permissions,
+                    monitoring and cron jobs.
+
+                </p>
+
+            </div>
+
+            <div class="card project-card">
+
+                <h3>Python Automation</h3>
+
+                <p>
+
+                    Small automation utilities
+                    and productivity scripts.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ROADMAP -->
+
+    <section id="roadmap"
+        class="section">
+
+        <h2>Learning Roadmap</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Completed</h3>
+
+                <ul>
+
+                    <li>Linux Basics</li>
+                    <li>Python Basics</li>
+                    <li>GitHub Portfolio</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Current Focus</h3>
+
+                <ul>
+
+                    <li>AWS</li>
+                    <li>Networking</li>
+                    <li>Git & GitHub</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Next Goals</h3>
+
+                <ul>
+
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                    <li>Terraform</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience"
+        class="section">
+
+        <h2>Professional Experience</h2>
+
+        <div class="card">
+
+            <h3>Operations Associate | Ditto Insurance</h3>
+
+            <p>
+
+                Managed claims operations,
+                issue resolution,
+                SLA adherence,
+                stakeholder communication
+                and process improvements.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Team Leader Operations</h3>
+
+            <p>
+
+                Led support teams,
+                handled escalations,
+                managed KPIs,
+                improved CSAT
+                and operational efficiency.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact"
+        class="section">
+
+        <h2>Let's Connect</h2>
+
+        <div class="card">
+
+            <p>
+
+                I'm actively seeking opportunities
+                in Cloud Computing,
+                Cloud Operations,
+                Technical Support Engineering
+                and DevOps.
+
+            </p>
+
+            <p>
+
+                📧 madanpm05@gmail.com
+
+            </p>
+
+            <p>
+
+                🔗 linkedin.com/in/madanpm
+
+            </p>
+
+            <p>
+
+                💻 github.com/Madan-PM
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+
+            © 2026 Madan P M
+
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
